@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freiburg Police • Dienstportal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="badge">FP</div><div><b>FREIBURG POLICE</b><small>DIENSTPORTAL</small></div></div>
+    <nav id="nav" hidden>
+      <button data-page="dashboard" class="active">▦ Übersicht</button>
+      <button data-page="personal">♙ Personal</button>
+      <button data-page="akten">▤ Akten</button>
+      <button data-page="haft">▣ Verhaftungen</button>
+      <button data-page="fahndung">⌕ Fahndungen</button>
+      <button data-page="verhandlung">⚖ Verhandlungen</button>
+    </nav>
+    <div class="sidefoot">ESX INTEGRATION <span id="connection">● Offline</span></div>
+  </aside>
+  <main>
+    <header><div><small>POLIZEI / INTERN</small><h1 id="heading">Anmeldung</h1></div><div id="userbox"></div></header>
+    <section id="login" class="login-card">
+      <div class="eyebrow">SICHERER ZUGANG</div><h2>Willkommen im Dienst.</h2><p>Melde dich mit deiner Dienstnummer und deinem PIN an. Mitarbeiter benötigen den Status „Im Dienst“. Der Polizeichef kann sich jederzeit anmelden.</p>
+      <form id="loginForm"><label>Dienstnummer<input id="badge" placeholder="z. B. 01" required autocomplete="username"></label>
+      <label>PIN / Passwort<input id="pin" type="password" placeholder="PIN eingeben" required autocomplete="current-password"></label>
+      <button class="primary">Anmelden <span>→</span></button></form>
+      <p class="hint">Chef-Startzugang: Dienstnummer <b>01</b> · PIN <b>Chef</b>. Der Chef-Login funktioniert jederzeit, auch außer Dienst. Bitte Zugangsdaten vor dem Livebetrieb ändern.</p>
+      <p id="loginError" class="error"></p>
+    </section>
+    <section id="app" hidden>
+      <div id="content"></div>
+    </section>
+  </main>
+</div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
